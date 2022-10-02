@@ -1,0 +1,120 @@
+components:
+  schemas:
+    CreateVacancyDto:
+      type: object
+      properties:
+        jobTitle:
+          type: string
+          description: Job Title
+          example: Test Job
+        companyName:
+          type: string
+          description: Vacancy company
+        vacancyLink:
+          type: string
+          description: Link to vacancy (must be valid link)
+          example: https://www.google.com/
+        country:
+          type: string
+          description: Vacancy country
+          example: Ukraine
+        city:
+          type: string
+          description: Vacancy city
+          example: Kyiv
+        status:
+          type: string
+          description: Current status of application ( from 0 to 3 ).
+          example: 0
+        vacancyType:
+          type: string
+          description: Vacancy job type ( Remote or Office )
+          example: Office
+    CreateVacancyResponse:
+      type: object
+      properties:
+        jobTitle:
+          type: string
+          description: Job Title
+          example: Test Job
+        companyName:
+          type: string
+          description: Vacancy company
+        vacancyLink:
+          type: string
+          description: Link to vacancy (must be valid link)
+        country:
+          type: string
+          description: Vacancy country
+          example: Ukraine
+        city:
+          type: string
+          description: Vacancy city
+          example: Kyiv
+        status:
+          type: string
+          description: Current status of application ( from 0 to 3 ).
+          example: 0
+        vacancyType:
+          type: string
+          description: Vacancy job type ( Remote or Office )
+          example: Office
+    UpdateVacancyDto:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Current status of application ( from 0 to 3 ).
+          example: 1
+    UpdateVacancyResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Current status of application ( from 0 to 3 ).
+          example: 1
+        message:
+          type: string
+        _id:
+          type: string
+          description: ID of updated vacancy
+    VacancySuccessDto:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique database id
+        userId:
+          type: string
+          description: unique user database id
+        jobTitle:
+          type: string
+          description: Job Title
+          example: Test Job
+        companyName:
+          type: string
+          description: Vacancy company
+        vacancyLink:
+          type: string
+          description: Link to vacancy (must be valid link)
+        country:
+          type: string
+          description: Vacancy country
+          example: Ukraine
+        city:
+          type: string
+          description: Vacancy city
+          example: Kyiv
+        status:
+          type: string
+          description: Current status of application ( from 0 to 3 ).
+          example: 0
+        vacancyType:
+          type: string
+          description: Vacancy job type ( Remote or Office )
+          example: Office
+    VacancyBadResponse:
+      type: object
+      properties:
+        message:
+          type: string

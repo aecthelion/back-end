@@ -1,0 +1,59 @@
+components:
+  schemas:
+    UserProfile:
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: Doe
+    UpdateUserProfileDto:
+      type: object
+      properties:
+        password:
+          type: string
+          format: password
+          description: User's updated password (1 upper letter, 1 lower letter, 1 special symbol , min length - 6 symbols)
+          example: Test123456#
+        email:
+          type: string
+          format: email
+          description: User's updated email
+          example: johndoe@test.com
+        firstName:
+          type: string
+          description: User's updated first name
+          example: John
+        lastName:
+          type: string
+          description: User's updated last name
+          example: Doe
+    UpdateUserProfileResponseDto:
+      type: object
+      properties:
+        message:
+          type: string
+        email:
+          type: string
+          format: email
+          description: User's updated email
+          example: example@mail.com
+        firstName:
+          type: string
+          description: User's updated first name
+          example: John
+        lastName:
+          type: string
+          description: User's updated last name
+          example: Doe
+    UserListResponse:
+      data:
+        type: array
+        items:
+    UserBadResponse:
+      type: object
+      properties:
+        message:
+          type: string

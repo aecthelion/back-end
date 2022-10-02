@@ -1,0 +1,84 @@
+components:
+  schemas:
+    CreateCourseDto:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Course title ( unique )
+          example: Front End
+        type:
+          type: string
+          description: Course type ( Part-time / Full-time )
+        icon:
+          type: string
+          format: binary
+          description: Icon for course
+    CreateCourseResponse:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Course title ( unique )
+          example: Front End
+        type:
+          type: string
+          description: Course type ( Part-time / Full-time )
+        icon:
+          type: string
+          description: Icon for course
+    UpdateCourseDto:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Course title ( unique )
+          example: Front End
+        type:
+          type: string
+          description: Course type ( Part-time / Full-time )
+    UpdateCourseResponse:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Course title ( unique )
+          example: Front End
+        type:
+          type: string
+          description: Course type ( Part-time / Full-time )
+        icon:
+          type: string
+          description: Icon for course
+    CourseSuccessDto:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique database id
+        title:
+          type: string
+          description: Course title ( unique )
+          example: Front End
+        type:
+          type: string
+          description: Course type ( Part-time / Full-time )
+        icon:
+          type: string
+          description: Icon for course
+    CourseBadResponse:
+      type: object
+      properties:
+        message:
+          type: string
+    CourseDeleteResponse:
+      type: object
+      properties:
+        message:
+          type: string
+    CourseListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:

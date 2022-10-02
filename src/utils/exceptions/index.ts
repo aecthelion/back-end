@@ -1,0 +1,6 @@
+export * from "@utils/exceptions/http.exception"
+export * from "@utils/exceptions/bad-request.exception"
+export * from "@utils/exceptions/forbidden.exception"
+export * from "@utils/exceptions/internal-server-error.exception"
+export * from "@utils/exceptions/not-found.exception"
+export * from "@utils/exceptions/unauthorized.exception"
