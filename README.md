@@ -25,6 +25,6 @@ LOGS_PATH = "./logs/"
 
 ## Users for test
 
-hr: hr@test.com Qq123456# .\
-admin: admin@test.com Qq123456#
+hr: hr@test.com Qq123456# \
+admin: admin@test.com Qq123456# \
 user: testuser@test.com Qq123456#
