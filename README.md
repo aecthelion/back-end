@@ -16,8 +16,8 @@ You will also see any lint errors in the console.
 
 PORT=5000 .\
 JWT_SECRET=rockitbabytothened .\
-MONGO_URI = mongodb+srv://aecthelion:A180893n@rockitcluster.ckracpg.mongodb.net/rockit?retryWrites=true&w=majority .\
+MONGO_URI = mongodb+srv://aecthelion:A180893n@rockitcluster.ckracpg.mongodb.net/rockit?retryWrites=true&w=majority
 NODE_ENV = development .\
 
-MAX_LOG_FILES = 4 .\
-LOGS_PATH = "./logs/" .\
+MAX_LOG_FILES = 4
+LOGS_PATH = "./logs/"
