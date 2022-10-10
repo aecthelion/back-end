@@ -14,10 +14,10 @@ You will also see any lint errors in the console.
 
 **Note: to be able to connect mongoDb - create .env file in root of app and add var below**
 
-PORT=5000
-JWT_SECRET=rockitbabytothened
-MONGO_URI = mongodb+srv://aecthelion:A180893n@rockitcluster.ckracpg.mongodb.net/rockit?retryWrites=true&w=majority
-NODE_ENV = development
+PORT=5000 .\
+JWT_SECRET=rockitbabytothened .\
+MONGO_URI = mongodb+srv://aecthelion:A180893n@rockitcluster.ckracpg.mongodb.net/rockit?retryWrites=true&w=majority .\
+NODE_ENV = development .\
 
-MAX_LOG_FILES = 4
-LOGS_PATH = "./logs/"
+MAX_LOG_FILES = 4 .\
+LOGS_PATH = "./logs/" .\
