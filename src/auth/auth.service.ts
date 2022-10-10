@@ -9,16 +9,16 @@ export interface IJwtPayload {
   email: string;
   firstName: string;
   lastName: string;
-  role: string
+  role: string;
 }
 
-class AuthService {
+export class AuthService {
   async registerUser(
     email: string,
     password: string,
     firstName: string,
     lastName: string,
-    avatar: string,
+    avatar: string
   ) {
     const candidate = await User.findOne({ email });
     if (candidate) {
@@ -32,7 +32,7 @@ class AuthService {
       firstName,
       lastName,
       avatar,
-      role: "user"
+      role: "user",
     });
 
     await user.save();

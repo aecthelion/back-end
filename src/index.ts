@@ -29,10 +29,14 @@ const swaggerSpecification = swaggerJsdoc(options);
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/auth", require("./auth/auth.routes"));
 app.use("/api/user", require("./user/user.routes"));
 app.use("/api/vacancies", require("./vacancy/vacancy.routes"));
+app.use(
+  "/api/user-application",
+  require("./userApplication/userApplication.routes")
+);
 app.use("/api/course", require("./course/course.routes"));
 app.use("/uploads", express.static("uploads"));
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecification));

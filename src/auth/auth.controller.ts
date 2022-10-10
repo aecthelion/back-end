@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request } from "express";
 import { validationResult } from "express-validator";
 import authService from "@src/auth/auth.service";
 import { BadRequestException } from "@src/utils/exceptions";
@@ -16,7 +16,7 @@ interface ILoginBody {
   email: string;
 }
 
-class AuthController {
+export class AuthController {
   async register(
     req: Request<any, any, IRegisterBody>
   ): Promise<{ message: string }> {
@@ -51,6 +51,7 @@ class AuthController {
 
     const { token, role, userId, firstName, lastName, avatar } =
       await authService.loginUser(email, password);
+
     return {
       token,
       role,
@@ -62,5 +63,3 @@ class AuthController {
     };
   }
 }
-
-export default new AuthController();

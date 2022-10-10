@@ -1,0 +1,78 @@
+components:
+  schemas:
+    CreateUserApplicationDto:
+      type: object
+      properties:
+        userId:
+          type: string
+          description: user unique id
+        englishLvl:
+          type: string
+          description: user english lvl
+        technicalBackground:
+          type: string
+          description: user technical background
+        status:
+          type: string
+          description: Current status of application.
+          example: 0
+    CreateUserApplicationResponse:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: unique database id
+        userId:
+          type: string
+          description: user unique id
+        englishLvl:
+          type: string
+          description: user english lvl
+        technicalBackground:
+          type: string
+          description: user technical background
+        status:
+          type: string
+          description: Current status of application.
+          example: 0
+    UpdateUserApplicationDto:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Current status of application
+    UpdateUserApplicationResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Current status of application
+        message:
+          type: string
+        _id:
+          type: string
+          description: ID of updated user application
+    UserApplicationSuccessDto:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: unique database id
+        userId:
+          type: string
+          description: user unique id
+        englishLvl:
+          type: string
+          description: user english lvl
+        technicalBackground:
+          type: string
+          description: user technical background
+        status:
+          type: string
+          description: Current status of application.
+          example: 0
+    UserApplicationBadResponse:
+      type: object
+      properties:
+        message:
+          type: string

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import authController from "@src/auth/auth.controller";
+import { AuthController } from "@src/auth/auth.controller";
 import { requestWrapper } from "@utils/request-wrapper";
 import { errorHandler } from "@src/middleware/error-handling.middleware";
 import multer from "multer";
@@ -27,6 +27,8 @@ import { hashFileName } from "@src/utils/helpers";
  */
 
 const router = Router();
+
+const authController = new AuthController();
 
 const storage = multer.diskStorage({
   destination: (req, file: Express.Multer.File, callback: any) => {
